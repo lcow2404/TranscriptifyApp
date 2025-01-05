@@ -1,6 +1,5 @@
 import React from 'react';
 import { Download, RefreshCw } from 'lucide-react';
-import { Button } from '@/components/ui/button';
 
 interface TranscriptDisplayProps {
   transcript: string;
@@ -15,31 +14,25 @@ const TranscriptDisplay: React.FC<TranscriptDisplayProps> = ({
 }) => {
   return (
     <div className="w-full max-w-2xl mx-auto space-y-4">
-      <div className="min-h-[200px] p-6 bg-white rounded-xl shadow-sm border border-gray-100 transition-all hover:shadow-md">
-        <p className="text-gray-600 whitespace-pre-wrap">
-          {transcript || "Your transcript will appear here..."}
-        </p>
+      <div className="min-h-[200px] p-4 bg-white rounded-lg shadow-sm border">
+        {transcript || "Your transcript will appear here..."}
       </div>
       <div className="flex justify-end gap-2">
-        <Button
-          variant="ghost"
-          size="icon"
+        <button
           onClick={onReset}
-          className="hover:bg-gray-100"
+          className="p-2 text-gray-600 hover:text-gray-900 transition-colors"
           title="Reset transcript"
         >
           <RefreshCw className="w-5 h-5" />
-        </Button>
-        <Button
-          variant="ghost"
-          size="icon"
+        </button>
+        <button
           onClick={onDownload}
+          className="p-2 text-gray-600 hover:text-gray-900 transition-colors"
           disabled={!transcript}
-          className="hover:bg-gray-100"
           title="Download transcript"
         >
           <Download className="w-5 h-5" />
-        </Button>
+        </button>
       </div>
     </div>
   );
