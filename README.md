@@ -8,11 +8,11 @@
 
 There are several ways of editing your application.
 
-**Use Lovable**
+
 
 Simply visit the [Lovable Project](https://lovable.dev/projects/60dccaa5-f7e0-45c7-a402-97dc2becc51f) and start prompting.
 
-Changes made via Lovable will be committed automatically to this repo.
+Changes made via Lov will be committed automatically to this repo.
 
 **Use your preferred IDE**
 
